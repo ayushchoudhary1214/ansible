@@ -1,0 +1,7 @@
+ansible-playbook <playbookname>
+ansible vault create <playbookname>
+ansible vault edit <playbookname>
+defaults, tasks, meta, templates, vars, handlers, files.
+By default inventoryfile is hosts, To run your customize inventoryfile
+ansible-playbook -i <inventoryfilename> <playbook.yaml>
+A single task can notify more than one handler.
