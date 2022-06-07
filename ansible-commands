@@ -1,3 +1,4 @@
+ansible -m ping all
 ansible-playbook <playbookname>
 ansible vault create <playbookname>
 ansible vault edit <playbookname>
@@ -5,3 +6,7 @@ defaults, tasks, meta, templates, vars, handlers, files.
 By default inventoryfile is hosts, To run your customize inventoryfile
 ansible-playbook -i <inventoryfilename> <playbook.yaml>
 A single task can notify more than one handler.
+ansible <hostname> --become -m yum -a "pkg=httpd state=present"
+ansible <hostname> -b -m copy -a "src= /tmp/abc.txt dest= /home
+ansible <hostname> -b -m service -a "name=nginx state=started"
+ansible <grpname> -b -m user -a "name=ansible password=ansible"
