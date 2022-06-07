@@ -10,3 +10,4 @@ ansible <hostname> --become -m yum -a "pkg=httpd state=present"
 ansible <hostname> -b -m copy -a "src= /tmp/abc.txt dest= /home
 ansible <hostname> -b -m service -a "name=nginx state=started"
 ansible <grpname> -b -m user -a "name=ansible password=ansible"
+To reboot hosts	#ansible <group> -a “/bin/reboot”
